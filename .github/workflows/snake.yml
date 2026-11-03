@@ -1,0 +1,71 @@
+# ==============================================================================
+# GitHub Actions Workflow: Generate Contribution Snake
+# Target User: heliosparta18 (resolves dynamically via github.repository_owner)
+# Target Branch: output
+# ==============================================================================
+#
+# SETUP & PERMISSIONS INSTRUCTIONS:
+# To enable this workflow to commit and push generated SVGs to the 'output' branch:
+#
+# 1. Open the repository on GitHub:
+#    https://github.com/heliosparta18/heliosparta18/settings/actions
+# 2. Scroll down to the "Workflow permissions" section.
+# 3. Select "Read and write permissions" (allows GITHUB_TOKEN write access).
+# 4. (Optional) Check "Allow GitHub Actions to approve pull requests" if prompted.
+# 5. Click "Save".
+#
+# ASSET USAGE:
+# The generated assets are pushed to an orphan branch named 'output' and can be
+# referenced directly in readme.md using GitHub's raw CDN:
+# - Light Theme: https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake.svg
+# - Dark Theme:  https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake-dark.svg
+# ==============================================================================
+
+name: Generate Contribution Snake
+
+on:
+  # Schedule: Run automatically every 12 hours (00:00 and 12:00 UTC)
+  schedule:
+    - cron: "0 */12 * * *"
+
+  # Manual dispatch: Allows triggering the workflow on-demand from the Actions tab
+  workflow_dispatch:
+
+  # Push trigger: Run on push to main branch (e.g. after initial workflow setup)
+  push:
+    branches:
+      - main
+
+# Explicit permissions required to push generated SVG assets to the output branch
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    name: Generate Contribution Snake SVGs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # Step 1: Generate contribution grid snake SVGs (Light & Dark palettes)
+      # Uses Platane/snk/svg-only for lightweight, headless vector generation without Puppeteer/Chromium overhead
+      - name: Generate Snake SVG files
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 2: Push generated SVGs to the orphan 'output' branch
+      # keep_history: false ensures git history remains clean with a single latest commit
+      - name: Push Snake SVGs to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
