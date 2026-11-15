@@ -7,34 +7,42 @@
 # SETUP & PERMISSIONS INSTRUCTIONS:
 # To enable this workflow to commit and push generated SVGs to the 'output' branch:
 #
-# 1. Open the repository on GitHub:
+# 1. Open repository settings on GitHub:
 #    https://github.com/heliosparta18/heliosparta18/settings/actions
-# 2. Scroll down to the "Workflow permissions" section.
-# 3. Select "Read and write permissions" (allows GITHUB_TOKEN write access).
-# 4. (Optional) Check "Allow GitHub Actions to approve pull requests" if prompted.
-# 5. Click "Save".
+# 2. Under "Workflow permissions", select "Read and write permissions".
+# 3. Save changes.
 #
 # ASSET USAGE:
-# The generated assets are pushed to an orphan branch named 'output' and can be
-# referenced directly in readme.md using GitHub's raw CDN:
+# The generated assets are deployed to the orphan branch 'output' and referenced
+# directly in readme.md via GitHub's raw CDN:
 # - Light Theme: https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake.svg
 # - Dark Theme:  https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake-dark.svg
 # ==============================================================================
 
 name: Generate Contribution Snake
 
-on:
-  # Schedule: Run automatically every 12 hours (00:00 and 12:00 UTC)
+'on':
+  # Schedule: Run automatically every 5 minutes.
+  # Note on execution frequency: While POSIX cron allows 1-minute intervals,
+  # GitHub Actions enforces a strict platform minimum of 5 minutes (*/5 * * * *).
+  # Any sub-5-minute interval (such as */1) is automatically throttled or rejected
+  # by GitHub's scheduler. Setting to */5 * * * * maximizes run frequency within
+  # platform constraints.
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "*/5 * * * *"
 
   # Manual dispatch: Allows triggering the workflow on-demand from the Actions tab
   workflow_dispatch:
 
-  # Push trigger: Run on push to main branch (e.g. after initial workflow setup)
+  # Push trigger: Run immediately when changes are pushed to main
   push:
     branches:
       - main
+
+# Prevent concurrent workflow runs on the same branch from colliding
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 # Explicit permissions required to push generated SVG assets to the output branch
 permissions:
@@ -48,24 +56,31 @@ jobs:
 
     steps:
       # Step 1: Generate contribution grid snake SVGs (Light & Dark palettes)
-      # Uses Platane/snk/svg-only for lightweight, headless vector generation without Puppeteer/Chromium overhead
+      # Uses Platane/snk/svg-only for lightweight, headless vector generation.
+      # Custom high-contrast palettes replace default invisible purple with vivid,
+      # WCAG AA/AAA compliant palettes:
+      # - Light mode: warm terracotta (#c2410c) snake with fresh mint-teal dot progression
+      # - Dark mode: electric coral (#f97316) snake with luminous cyan-teal dot progression
       - name: Generate Snake SVG files
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=#c2410c&color_dots=#ebedf0,#99f6e4,#2dd4bf,#0d9488,#115e59
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#f97316&color_dots=#161b22,#0f766e,#0d9488,#14b8a6,#2dd4bf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Step 2: Push generated SVGs to the orphan 'output' branch
-      # keep_history: false ensures git history remains clean with a single latest commit
+      # keep_history: false ensures git history remains clean with a single latest commit.
+      # Uses crazy-max/ghaction-github-pages@v5.0.0 running modern Node 24 runtime.
       - name: Push Snake SVGs to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v5.0.0
         with:
           target_branch: output
           build_dir: dist
           keep_history: false
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

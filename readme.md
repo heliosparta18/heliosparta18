@@ -1,106 +1,109 @@
 <div align="center">
 
-# `HELIOSPARTA18`
+# Daffa
 
-<p align="center">
-  <em>Software Engineering • Backend Systems • Interactive Interfaces</em>
+<p>
+  <strong>Software Engineer &amp; Systems Architect</strong><br />
+  <em>Membangun arsitektur backend berkinerja tinggi, aplikasi mobile modular, dan integrasi API yang tangguh.</em>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
-  <img src="https://img.shields.io/badge/Livewire-FB70A9?style=for-the-badge&logo=livewire&logoColor=white" alt="Livewire" />
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" alt="MariaDB" />
-</p>
-
-</div>
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake.svg" />
-    <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake.svg" width="100%" />
-  </picture>
-</div>
-
----
-
-### Overview
-
-Fokus pada rekayasa perangkat lunak modular, arsitektur backend berbasis event, serta antarmuka digital yang presisi dan fungsional. Mengutamakan performa, keterbacaan kode, dan struktur basis data yang terukur.
-
----
-
-### Core Tech Stack
-
-* **Backend & Systems:** PHP (Laravel ecosystem, Livewire), RESTful API Engineering, Redis, MariaDB / MySQL
-* **Mobile & Frontend:** Dart (Flutter), TypeScript, Modern CSS Architecture
-* **Interface & Prototyping:** UI/UX Systems, Figma, Human-Centered Interaction Design
-
----
-
-### Featured Works
-
-* **Kantin Multi-Tenant**  
-  Arsitektur multi-tenant dengan penanganan transaksi realtime menggunakan Laravel, Redis, dan MariaDB.
-* **Mobile Ecosystem**  
-  Implementasi aplikasi mobile modular berbasis Dart yang mengedepankan state management yang bersih dan integrasi REST API adaptif.
-* **Interoperabilitas & API Services**  
-  Perancangan arsitektur mikro dan layanan REST API terstruktur untuk efisiensi komunikasi antar-sistem.
-* **Interactive Web Experiments**  
-  Eksplorasi antarmuka web, visualisasi interaktif, dan animasi front-end yang ringan.
-
----
-
-### Activity & Analytics
-
-<p align="center">
-  <a href="https://github.com/heliosparta18">
-    <img height="165" src="https://github-readme-stats.vercel.app/api?username=heliosparta18&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&icon_color=3fb950&border_radius=8" alt="heliosparta18 GitHub Stats" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/heliosparta18">
-    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=heliosparta18&layout=compact&langs_count=6&hide_border=false&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&border_radius=8" alt="heliosparta18 Top Languages" />
-  </a>
-</p>
-
----
-
-### Connect & Contact
-
-<p align="center">
-  <a href="https://github.com/heliosparta18">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
-  </a>
-  &nbsp;
+<p>
   <a href="mailto:heliosparta18@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Direct" />
+    <img src="https://img.shields.io/badge/Email-heliosparta18%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email Direct" />
   </a>
-  &nbsp;
+  <a href="https://github.com/heliosparta18">
+    <img src="https://img.shields.io/badge/GitHub-heliosparta18-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
   <a href="https://linkedin.com/in/heliosparta18">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile" />
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Profile" />
   </a>
 </p>
 
----
-
-<details>
-<summary><b>Workflow Automation & Permissions</b></summary>
-<br />
-The automated contribution snake workflow runs via GitHub Actions (<code>.github/workflows/snake.yml</code>). To permit automated asset publication to the <code>output</code> branch, configure workflow permissions to read and write (<code>contents: write</code>) under <b>Settings &gt; Actions &gt; General &gt; Workflow permissions</b>.
-</details>
-
----
-
-<div align="center">
-
-```text
-git commit -m "refactor: simplify architecture and prioritize clarity"
-```
+<!-- Contribution Snake Animation -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/heliosparta18/heliosparta18/output/github-contribution-grid-snake.svg" style="max-width: 100%; height: auto;" />
+</picture>
 
 </div>
+
+---
+
+### Profil Singkat
+
+Fokus utama pada rekayasa perangkat lunak modular, arsitektur backend berbasis transaksi realtime, serta integrasi antarmuka digital yang presisi. Berpengalaman merancang sistem multi-tenant terdistribusi, manajemen antrean asynchronous, dan aplikasi mobile dengan arsitektur bersih.
+
+Mengutamakan keterbacaan kode, struktur basis data relasional yang efisien, dan keandalan sistem jangka panjang.
+
+---
+
+### Tech Stack &amp; Ekosistem
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h4>Backend &amp; Basis Data</h4>
+      <ul>
+        <li><strong>PHP &amp; Laravel Ecosystem:</strong> Laravel 13, Livewire 4</li>
+        <li><strong>Cache &amp; Message Queue:</strong> Redis</li>
+        <li><strong>Basis Data Relasional:</strong> MariaDB, MySQL</li>
+        <li><strong>Protokol &amp; Arsitektur:</strong> RESTful APIs, WebSockets</li>
+      </ul>
+    </td>
+    <td width="33%" valign="top">
+      <h4>Mobile &amp; Frontend</h4>
+      <ul>
+        <li><strong>Cross-Platform Mobile:</strong> Dart, Flutter</li>
+        <li><strong>Frontend Terstruktur:</strong> TypeScript, JavaScript</li>
+        <li><strong>Styling &amp; Antarmuka:</strong> Tailwind CSS, Modern CSS</li>
+      </ul>
+    </td>
+    <td width="33%" valign="top">
+      <h4>Alat &amp; Alur Kerja</h4>
+      <ul>
+        <li><strong>Version Control:</strong> Git, GitHub Actions (CI/CD)</li>
+        <li><strong>Arsitektur Sistem:</strong> Multi-Tenant, Modular Monolith</li>
+        <li><strong>Desain &amp; Prototyping:</strong> Figma, Interaction Design</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+---
+
+### Proyek Pilihan
+
+* **[Kantin Multi-Tenant](https://github.com/heliosparta18/kantin-multi-tenant-devit)**  
+  Arsitektur backend multi-tenant untuk pengelolaan transaksi kantin secara realtime. Mengimplementasikan Laravel 13, Livewire 4, in-memory caching Redis, dan penyimpanan relasional MariaDB.  
+  *Teknologi: PHP, Laravel 13, Livewire 4, Redis, MariaDB*
+
+* **[Mobile Ekosistem Daffa](https://github.com/heliosparta18/mobile-ekosistem-daffa)**  
+  Aplikasi mobile modular berbasis Flutter dan Dart dengan manajemen state reaktif, isolasi dependensi, serta konsumsi REST API yang adaptif.  
+  *Teknologi: Dart, Flutter, REST API*
+
+* **[Interoperabilitas &amp; Layanan API](https://github.com/heliosparta18/test-intoprabilitas)**  
+  Infrastruktur API gateway terstruktur untuk komunikasi data antar-layanan dengan validasi ketat dan latensi rendah.  
+  *Teknologi: PHP, Laravel, TypeScript, REST Architecture*
+
+* **[Eksplorasi Web Interaktif](https://github.com/heliosparta18/code-name-666)**  
+  Eksperimen antarmuka web interaktif, visualisasi canvas, dan micro-interaction yang ringan serta responsif.  
+  *Teknologi: JavaScript, Modern CSS, HTML5 Canvas*
+
+---
+
+### Aktivitas &amp; Statistik
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=heliosparta18&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&icon_color=3fb950&border_radius=8" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api?username=heliosparta18&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=ffffff&border_color=e1e4e8&title_color=0969da&text_color=24292f&icon_color=1a7f37&border_radius=8" />
+    <img src="https://github-stats-extended.vercel.app/api?username=heliosparta18&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&icon_color=3fb950&border_radius=8" alt="Daffa GitHub Stats" height="165" />
+  </picture>
+  &nbsp;
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=heliosparta18&layout=compact&langs_count=6&hide_border=false&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&border_radius=8" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=heliosparta18&layout=compact&langs_count=6&hide_border=false&bg_color=ffffff&border_color=e1e4e8&title_color=0969da&text_color=24292f&border_radius=8" />
+    <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=heliosparta18&layout=compact&langs_count=6&hide_border=false&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&border_radius=8" alt="Daffa Top Languages" height="165" />
+  </picture>
+</p>
